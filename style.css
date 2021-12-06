@@ -1,0 +1,336 @@
+/* ------------------------ */
+/* Custom Properties        */
+/* ------------------------ */
+
+:root {
+
+    --clr-primary : hsl(224, 93%, 58%);
+    --clr-accent : hsl(170, 45%, 43%);
+
+    --txt-clr-black : hsl(243, 87%, 12%);
+    --txt-clr-light : hsl(238, 22%, 44%);
+
+    --bg-clr-gray: hsl(240, 75%, 98%);
+    --bg-clr-dark-gray: hsl(0, 0%, 75%);
+
+    --ff-heading: 'Raleway', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    --fs-xl: 1.5rem;
+    --fs-l: 1.125rem;
+    --fs-m: 1rem;
+    --fs-s: .875rem;
+    --fs-xs: .75rem;
+}
+
+/* ------------------------ */
+/* Reset                    */
+/* ------------------------ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    min-height: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--txt-clr-light);
+}
+
+header a:visited {
+    color: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.input:focus {
+    outline-color: var(--clr-primary);
+}
+
+/* ------------------------ */
+/* Utility Class            */
+/* ------------------------ */
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.container {
+    padding-inline: 2em;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.ff-heading {
+    font-family: var(--ff-heading);
+}
+
+.ff-body {
+    font-family: var(--ff-body);
+}
+
+.txt-clr-heading {
+    color: var(--txt-clr-black);
+}
+
+.txt-clr-body {
+    color: var(--txt-clr-light);
+}
+
+.txt-align-center {
+    text-align: center;
+}
+
+/* ------------------------ */
+/* Header                   */
+/* ------------------------ */
+
+header {
+    padding: 1.5em 2em;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--fs-s);
+}
+
+.logo {
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------ */
+/* Main                     */
+/* ------------------------ */
+
+p {
+    font-size: var(--fs-s);
+    margin: 1em 0;
+    line-height: 1.5;
+}
+
+.hero {
+    flex-direction: column-reverse;
+    margin: 4em 0;
+}
+
+.text-content {
+    margin: 1em 0;
+}
+
+h1 {
+    font-size: var(--fs-xl);
+    letter-spacing: .03em; 
+    line-height: 1.6;
+}
+h2 {
+    font-size: var(--fs-l);
+}
+
+h1,h2 {
+    margin: 1em 0;
+    color: var(--txt-clr-black);
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    padding: 1em 2em;
+    margin-top: 2.5em;
+    border: 1px solid var(--txt-clr-black);
+    border-radius: 5px;
+}
+
+input::placeholder {
+    opacity: .7;
+    color: var(--bg-clr-dark-gray);
+    font-size: var(--fs-s);
+}
+
+button {
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: var(--clr-primary);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-m);
+}
+
+.curved{
+    margin-top: 5em;
+    min-height: 100px;
+    background-image: url(images/bg-curve-mobile.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.second {
+    background-color: var(--bg-clr-gray);
+    flex-direction: column-reverse;
+}
+
+.two-p {
+    padding: 1em 1.5em;
+}
+
+.second-btn {
+    width: 80%;
+    
+}
+
+.underline-btn {
+    position: relative;
+    font-size: var(--fs-s);
+    justify-content: center;
+    align-items: center;
+}
+
+.underline-btn::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    min-height: 1px;
+    background-color: var(--clr-accent);
+    bottom: -10%;
+}
+
+.underline-btn span {
+    color: var(--clr-accent);
+}
+
+.underline-btn img {
+    width: 9%;
+}
+
+/* ------------------------ */
+/* Testimonial              */
+/* ------------------------ */
+
+.testimonial-card {
+    margin: 3em auto;
+    width: 80%;
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px hsl(0 0% 75% / .3);
+}
+
+.testimonial {
+    flex-direction: column;
+    gap: .5em;
+    font-size: var(--fs-xs);
+}
+
+.testimonial_text {
+    margin: 0;
+    font-size: var(--fs-xs);
+}
+
+.testimonial .quote {
+    width: 5%;
+}
+
+.testimonial .avater {
+    width: 13%;
+    border-radius: 50%;
+}
+
+.profile {
+    align-items: center;
+    margin: 1em 0;
+}
+
+h3 {
+    margin: .25em 0;
+    letter-spacing: .1em;
+    color: var(--txt-clr-black);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+}
+
+/* ------------------------ */
+/* Third Section            */
+/* ------------------------ */
+
+.third {
+    color: white;
+    background-color: hsla(241, 38%, 46%, 0.842);
+    padding: 2em;
+}
+
+.third h2 {
+    color: white;
+}
+
+.submit {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.submit button,
+.submit input {
+    padding: .75em 1em;
+    font-size: var(--fs-s);
+}
+
+/* ------------------------ */
+/* Footer                   */
+/* ------------------------ */
+
+footer {
+    font-size: var(--fs-m);
+    padding-top: 4em;
+    color: white;
+    background-color: hsl(243, 87%, 12%);
+    flex-direction: column;
+}
+
+
+.logo-white {
+    width: 60%;
+}
+
+.contact-info img {
+    width: 6%;
+    height: 6%;
+}
+
+.phone,
+.email {
+    align-items: center;
+}
+
+.about-info,
+.other-info {
+    flex-direction: column;
+    margin: 1em 0;
+}
