@@ -62,7 +62,8 @@ footer a {
 }
 
 .input:focus {
-    outline-color: var(--clr-primary);
+    outline: none;
+    border-color: var(--clr-primary);
 }
 
 /* ------------------------ */
@@ -163,7 +164,7 @@ input {
     width: 100%;
     padding: 1em 2em;
     margin-top: 2.5em;
-    border: 1px solid var(--txt-clr-black);
+    border: 1px solid var(--txt-clr-light);
     border-radius: 5px;
 }
 
@@ -206,7 +207,6 @@ button {
 
 .second-btn {
     width: 80%;
-    
 }
 
 .underline-btn {
